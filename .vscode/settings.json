@@ -1,0 +1,15 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.showExecutionMessage": false,
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.preserveFocus": false,
+    "code-runner.executorMap": {
+        "java": "clear && echo '=== Running Program ===' && echo '' && cd $workspaceRoot && javac -d bin src/**/*.java >/dev/null 2>&1 && java -cp bin $(echo $fullFileName | sed 's/.*src\\///' | sed 's/.java$//' | sed 's/\\//./g') && echo ''"
+    }
+}
